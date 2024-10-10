@@ -113,7 +113,7 @@ html_extra_path = ['robots.txt']
 # href with no underline and white bold text color
 announcement = """
 <a
-  href="https://flax-nnx.readthedocs.io/en/latest/index.html"
+  href="https://flax.readthedocs.io/en/latest/index.html"
   style="text-decoration: none; color: white;"
 >
   This site covers the old Flax Linen API. <span style="color: lightgray;">[Explore the new <b>Flax NNX</b> API ✨]</span>
@@ -137,7 +137,7 @@ html_theme_options = {
 
 # -- Options for myst ----------------------------------------------
 # uncomment line below to avoid running notebooks during development
-nb_execution_mode = 'off'
+# nb_execution_mode = 'off'
 # Notebook cell execution timeout; defaults to 30.
 nb_execution_timeout = 100
 # List of patterns, relative to source directory, that match notebook
@@ -147,6 +147,8 @@ nb_execution_excludepatterns = [
   'quick_start.ipynb',  # <-- times out
   'transfer_learning.ipynb',  # <-- transformers requires flax<=0.7.0
   'flax/nnx',  # exclude nnx
+  'guides/quantization/fp8_basics.ipynb',
+  'guides/training_techniques/use_checkpointing.ipynb',  # TODO(IvyZX): needs to be updated
 ]
 # raise exceptions on execution so CI can catch errors
 nb_execution_allow_errors = False
